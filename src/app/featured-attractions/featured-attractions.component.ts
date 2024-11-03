@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
 })
 export class FeaturedAttractionsComponent {
   images = [
-    'imagem1.jpg', // Substitua com o caminho correto das suas imagens
+    'imagem1.jpeg', // Substitua com o caminho correto das suas imagens
+    'imagem2.jpg',
     'imagem3.jpg'
   ];
 
