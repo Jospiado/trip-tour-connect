@@ -1,0 +1,58 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .carousel-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não transborde do card */
+  }
+  
+  .carousel-image {
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    height: auto; /* Altura automática para manter a proporção */
+    max-height: 90vh; /* Limita a altura a 90% da viewport para controle */
+    object-fit: cover; /* Cobre o contêiner sem distorção */
+    transition: transform 0.3s ease; /* Adiciona transição suave ao redimensionar */
+  }
+  
+  /* Estilo para aumentar/diminuir o zoom ao passar o mouse */
+  .carousel-card:hover .carousel-image {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+  }
+  
+  :host {
+    --carousel-image-width: 100%; /* Largura inicial, você pode ajustar conforme necessário */
+    --carousel-image-height: 80vh; /* Altura inicial, ajuste conforme necessário */
+  }
+  
+  .carousel-image {
+    width: var(--carousel-image-width);
+    height: var(--carousel-image-height);
+    object-fit: cover;
+  }
+  
+  /* Animação para deslize para a direita */
+  .next {
+    animation: slideNext 0.5s forwards;
+  }
+  
+  @keyframes slideNext {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  /* Animação para deslize para a esquerda */
+  .prev {
+    animation: slidePrev 0.5s forwards;
+  }
+  
+  @keyframes slidePrev {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  

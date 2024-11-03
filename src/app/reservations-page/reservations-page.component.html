@@ -1,0 +1,13 @@
+<div class="reservations-container">
+    <h1 style="color: #3d8f84;">Minhas Reservas</h1>
+    <button mat-raised-button color="primary" (click)="openReservationForm()">Nova Reserva</button>
+  
+    <div *ngFor="let reservation of reservations" class="reservation-card">
+      <h3>{{ reservation.experience }}</h3>
+      <p><strong>Data:</strong> {{ reservation.date }}</p>
+      <p><strong>Pessoas:</strong> {{ reservation.people }}</p>
+      <button mat-button color="warn" (click)="cancelReservation(reservation.id)">Cancelar</button>
+      <button mat-button (click)="rescheduleReservation(reservation.id)">Re-agendar</button>
+    </div>
+  </div>
+  

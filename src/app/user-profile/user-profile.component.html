@@ -1,0 +1,53 @@
+<div class="profile-container">
+    <h1>Perfil do Usuário</h1>
+  
+    <!-- Informações de Perfil -->
+    <mat-card>
+      <h2>Informações de Perfil</h2>
+  
+      <div *ngIf="!editMode">
+        <p><strong>Nome:</strong> {{ user.name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Preferências:</strong> {{ user.preferences }}</p>
+        <button mat-button color="primary" (click)="toggleEdit()">Editar</button>
+      </div>
+  
+      <div *ngIf="editMode">
+        <mat-form-field appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="user.name" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" [(ngModel)]="user.email" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Preferências</mat-label>
+          <textarea matInput [(ngModel)]="user.preferences"></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" (click)="saveChanges()">Salvar</button>
+        <button mat-button (click)="toggleEdit()">Cancelar</button>
+      </div>
+    </mat-card>
+  
+    <!-- Histórico de Atividades -->
+    <mat-card>
+      <h2>Histórico de Atividades</h2>
+      <div *ngFor="let activity of activities" class="activity-card">
+        <p><strong>Tipo:</strong> {{ activity.type }}</p>
+        <p><strong>Descrição:</strong> {{ activity.description }}</p>
+        <p><strong>Data:</strong> {{ activity.date | date: 'shortDate' }}</p>
+      </div>
+    </mat-card>
+  
+    <!-- Configurações de Conta -->
+    <mat-card>
+      <h2>Configurações de Conta</h2>
+      <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+      <button mat-raised-button color="warn" (click)="deleteAccount()">Excluir Conta</button>
+    </mat-card>
+  </div>
+  

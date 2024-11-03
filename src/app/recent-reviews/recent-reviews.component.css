@@ -1,0 +1,25 @@
+.reviews-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .review-card {
+    max-width: 500px;
+    margin: 10px auto;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  mat-icon {
+    color: #FFD700; /* Cor das estrelas */
+  }
+  

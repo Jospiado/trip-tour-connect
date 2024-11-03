@@ -1,0 +1,17 @@
+<div class="reviews-container">
+    <h2>Avaliações Recentes</h2>
+    <div *ngFor="let review of reviews" class="review-card">
+      <mat-card>
+        <mat-card-title>{{ review.user }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ review.comment }}</p>
+          <div class="stars">
+            <mat-icon *ngFor="let star of [1, 2, 3, 4, 5]">
+              {{ star <= review.rating ? 'star' : 'star_border' }}
+            </mat-icon>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

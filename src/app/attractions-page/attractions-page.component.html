@@ -1,0 +1,29 @@
+<div class="filter-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Categoria</mat-label>
+    <mat-select [(ngModel)]="selectedCategory" (selectionChange)="filterAttractions()">
+      <mat-option value="">Todas</mat-option>
+      <mat-option value="Natureza">Natureza</mat-option>
+      <mat-option value="Cultura">Cultura</mat-option>
+      <mat-option value="Praia">Praia</mat-option>
+      <!-- Adicione outras categorias conforme necessário -->
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar Atrativo</mat-label>
+    <input matInput [(ngModel)]="searchText" (input)="filterAttractions()" placeholder="Digite o nome do atrativo" />
+  </mat-form-field>
+</div>
+
+<div class="attractions-list">
+  <mat-card *ngFor="let attraction of filteredAttractions" class="attraction-card" (click)="openAttractionDetail(attraction.id)">
+    <mat-card-title>{{ attraction.name }}</mat-card-title>
+    <mat-card-content>
+      <p>Categoria: {{ attraction.category }}</p>
+      <p>Localização: {{ attraction.location }}</p>
+      <p>Preço: R$ {{ attraction.price }}</p>
+      <p>Avaliação: {{ attraction.rating }} ★</p>
+    </mat-card-content>
+  </mat-card>
+</div>

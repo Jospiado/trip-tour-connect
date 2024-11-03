@@ -1,0 +1,23 @@
+<div class="experiences-container">
+    <h1 style="color: #3d8f84;">Experiências Oferecidas</h1>
+  
+    <div *ngFor="let experience of experiences" class="experience-card">
+      <!-- Carrossel de Imagens -->
+      <app-carousel [images]="experience.images"></app-carousel>
+  
+      <!-- Detalhes da Experiência -->
+      <div class="details">
+        <h2>{{ experience.name }}</h2>
+        <p>{{ experience.description }}</p>
+        <p><strong>Duração:</strong> {{ experience.duration }}</p>
+        <p><strong>Preço:</strong> R$ {{ experience.price }}</p>
+        <p><strong>Participantes:</strong> Até {{ experience.participants }} pessoas</p>
+      </div>
+  
+      <!-- Botão de Reserva -->
+      <button mat-raised-button color="primary" (click)="makeReservation(experience.id)">
+        Reservar Experiência
+      </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,24 @@
+<div class="attraction-detail">
+    <h2>{{ attraction.name }}</h2>
+    <p><strong>Categoria:</strong> {{ attraction.category }}</p>
+    <p><strong>Localização:</strong> {{ attraction.latitude }},{{attraction.longitude}}</p>
+    <p><strong>Preço:</strong> R$ {{ attraction.price }}</p>
+    <p><strong>Avaliação:</strong> {{ attraction.rating }} ★</p>
+    <p>{{ attraction.description }}</p>
+  
+    <div class="image-gallery">
+      <img *ngFor="let image of attraction.images" [src]="image" alt="{{ attraction.name }}">
+    </div>
+  
+    <div class="actions">
+        <button mat-raised-button color="primary" (click)="reserveExperience()">Reservar Experiência</button>
+        <a [href]="getWhatsAppLink()" target="_blank" mat-raised-button color="primary">
+            <img src="whatsapp.png" alt="WhatsApp" class="icon"> Entrar em Contato
+        </a>
+        <a [href]="getGoogleMapsLink()" target="_blank" mat-raised-button color="accent">
+          <mat-icon>location_on</mat-icon> Me Leve Até Lá
+        </a>
+      </div>
+      <app-recent-reviews></app-recent-reviews>
+  </div>
+  

@@ -1,0 +1,26 @@
+.reviews-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .review-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  

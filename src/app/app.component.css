@@ -1,0 +1,9 @@
+.content {
+  margin-top: 100px; /* Ajuste o valor conforme necessário */,
+}
+
+  app-carousel {
+    --carousel-image-width: 100%; /* Ajuste para a largura desejada */
+    --carousel-image-height: 90vh; /* Ajuste para a altura desejada */
+  }
+  

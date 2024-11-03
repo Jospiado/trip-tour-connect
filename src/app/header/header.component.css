@@ -1,0 +1,82 @@
+.header-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed; /* Barra fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura da página */
+  height: 80px;
+  background-color: #04464c; /* Fundo para contraste ao rolar */
+  z-index: 1000; /* Garante que a barra fique sobre outros elementos */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.logo-container {
+  position: absolute;
+  left: 20px;
+}
+
+.logo {
+  height: 40px; /* Ajuste a altura da logo conforme necessário */
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #3d8f84;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #3d8f84;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .header-toolbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Ajuste a altura para auto no modo mobile */
+    padding: 10px;
+  }
+
+  .logo-container {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    height: 30px; /* Ajusta o tamanho da logo para mobile */
+  }
+
+  .nav-links a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+}

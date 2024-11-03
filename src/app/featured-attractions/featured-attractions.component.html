@@ -1,0 +1,19 @@
+<div class="featured-container">
+  <app-carousel [images]="images" [ngStyle]="{
+    '--carousel-image-width':2,
+    '--carousel-image-height': 2
+  }"></app-carousel>
+
+    <h2 style="color: #3d8f84;">Atrativos em Destaque</h2>
+    <div class="carousel">
+      <mat-card *ngFor="let attraction of attractions" class="attraction-card" (click)="goToAttractionPage(attraction.id)">
+        <img mat-card-image [src]="attraction.image" alt="{{ attraction.name }}">
+        <mat-card-title>{{ attraction.name }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ attraction.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <app-cta-buttons></app-cta-buttons>
+  </div>
+  

@@ -1,0 +1,50 @@
+.attraction-detail {
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  
+  .attraction-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .attraction-detail p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    overflow-x: auto;
+  }
+  
+  .image-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .actions a,
+  .actions button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .icon {
+    width: 24px; /* Define a largura padrão */
+    height: 24px; /* Define a altura padrão */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    vertical-align: middle; /* Alinha o ícone com o texto */
+  }

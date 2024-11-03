@@ -1,0 +1,31 @@
+.featured-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .attraction-card img {
+    width: 100px; /* Ajuste para o tamanho desejado */
+    height: 100px; /* Ajuste para o tamanho desejado */
+    object-fit: cover; /* Mantém a proporção sem distorção */
+    border-radius: 5px; /* Deixe as bordas arredondadas, se desejar */
+    margin: 10px auto; /* Centraliza a imagem horizontalmente */
+    display: block;
+  }
+  
+  .attraction-card:hover {
+    transform: scale(1.05);
+  }
+  

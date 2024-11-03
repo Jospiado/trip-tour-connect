@@ -1,0 +1,14 @@
+<div class="carousel-container">
+    <button mat-icon-button color="primary" (click)="prevImage()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    
+    <mat-card class="carousel-card" [ngClass]="slideDirection">
+      <img [src]="images[currentIndex]" alt="Imagem de atrativo turístico" [ngStyle]="{ 'height': desiredHeight }" class="carousel-image" />
+    </mat-card>
+    
+    <button mat-icon-button color="primary" (click)="nextImage()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+  

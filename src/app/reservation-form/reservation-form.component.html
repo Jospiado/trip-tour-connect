@@ -1,0 +1,21 @@
+<h2>Nova Reserva</h2>
+
+<form (ngSubmit)="saveReservation()">
+  <mat-form-field appearance="fill">
+    <mat-label>Experiência</mat-label>
+    <input matInput type="text" [(ngModel)]="reservation.experience" name="experience" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Data</mat-label>
+    <input matInput type="date" [(ngModel)]="reservation.date" name="date" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Número de Pessoas</mat-label>
+    <input matInput type="number" [(ngModel)]="reservation.people" name="people" min="1" required>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Salvar</button>
+  <button type="button" mat-button (click)="cancel()">Cancelar</button>
+</form>
