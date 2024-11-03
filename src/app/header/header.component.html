@@ -4,8 +4,11 @@
     <img src="Logo.jpeg" alt="Trip & Tour Conect Logo" class="logo" />
   </div>
   
+  <!-- Ícone do Menu Sanduíche para mobile -->
+  <div class="menu-icon" (click)="toggleMenu()">☰</div>
+
   <!-- Links de Navegação -->
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a routerLink="/home" routerLinkActive="active">Home</a>
     <a routerLink="/about-us" routerLinkActive="active">Sobre Nós</a>
     <a routerLink="/attractions-page" routerLinkActive="active">Fazer uma Reserva</a>
